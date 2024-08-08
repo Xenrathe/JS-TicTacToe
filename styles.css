@@ -1,0 +1,60 @@
+#playing-area {
+  width: 40vw;
+  min-width: 400px;
+  max-width: 100vw;
+  height: 50%;
+  margin-top: 5vh;
+  margin-left: 25vw;
+  border: solid 2px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#scoreboard {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 2fr 1fr;
+  border-bottom: 2px solid black;
+  padding: 5px 0px;
+}
+
+.player, #game-state, .square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#gameboard {
+  display: grid;
+  width: 40vw;
+  min-width: 400px;
+  height: 40vw;
+  min-height: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.square {
+  border: 1px solid black;
+  font-size: calc(50px + 4vw);
+  cursor: pointer;
+}
+
+.square.X {
+  background-color: rgb(210, 210, 255);
+}
+
+.square.O {
+  background-color: rgb(223, 255, 210);
+}
+
+.square:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.square.X:hover, .square.O:hover {
+  background-color: rgb(255, 144, 144);
+  cursor: not-allowed;
+}
