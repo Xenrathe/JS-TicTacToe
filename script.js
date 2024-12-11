@@ -129,6 +129,9 @@ const game = (function () {
     if (includingPlayers) {
       players = [];
     }
+
+    //Alter appearance stuff
+    updateAnnouncements();
     squares.forEach((square) => {
       square.classList.remove('X');
       square.classList.remove('O');
